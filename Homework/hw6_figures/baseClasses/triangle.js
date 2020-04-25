@@ -2,7 +2,6 @@ const { Figure } = require('../baseClasses/baseFigure');
 const { Point } = require('../baseClasses/point');
 
 class Triangle extends Figure {
-
     constructor(arr) {
         super(arr);
         if (new.target === Triangle) {
@@ -25,8 +24,6 @@ class Triangle extends Figure {
         this.sides.push(Math.round(Math.abs(ab)));
         this.sides.push(Math.round(Math.abs(bc)));
         this.sides.push(Math.round(Math.abs(ca)));
-        // console.log(this.sides);
-        // return this.sides;
         }
     }
     getSquare() {

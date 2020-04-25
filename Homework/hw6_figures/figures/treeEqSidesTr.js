@@ -1,6 +1,6 @@
 const { Triangle } = require('../baseClasses/triangle');
 
-class Equilateral extends Triangle {
+class ThreeEqSidesTr extends Triangle {
     side = 0;
     constructor(arr){
         super(arr);
@@ -15,4 +15,4 @@ class Equilateral extends Triangle {
         return this.side * 3;
     }
 }
-module.exports = { Equilateral };
+module.exports = { ThreeEqSidesTr };
