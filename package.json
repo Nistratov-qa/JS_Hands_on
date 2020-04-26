@@ -1,0 +1,20 @@
+{
+  "name": "js.hands.on",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node Homework/HW6_Figures/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nistratov-qa/JS_Hands_on.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nistratov-qa/JS_Hands_on/issues"
+  },
+  "homepage": "https://github.com/Nistratov-qa/JS_Hands_on#readme"
+}
