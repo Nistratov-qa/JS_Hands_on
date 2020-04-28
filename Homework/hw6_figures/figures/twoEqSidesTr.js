@@ -3,7 +3,6 @@ const { Triangle } = require('../baseClasses/triangle');
 class TwoEqSidesTr extends Triangle {
     constructor(arr) {
         super(arr);
-        this.culcAllSides();
         this.setSides();
     }
     uniqueSide;

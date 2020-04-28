@@ -3,7 +3,7 @@ const { Triangle } = require('../baseClasses/triangle');
 class RightTr extends Triangle {
     constructor(arr){
         super(arr);
-        this.culcAllSides();
+        // this.culcAllSides();
         this.setSides();
     }
     hupotenuse;

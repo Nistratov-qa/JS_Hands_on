@@ -1,17 +1,17 @@
-const {Figure} = require('./baseClasses/baseFigure');
-const {Circle} = require('./figures/circle');
-const {ThreeEqSidesTr} = require('./figures/treeEqSidesTr');
-const {TwoEqSidesTr} = require('./figures/twoEqSidesTr');
-const {RightTr} = require('./figures/rightTr');
-const {Rectangle} = require('./figures/rectangle');
-const {Square} = require('./figures/square');
-const {Rhombus} = require('./figures/rhombus');
+const { Figure } = require('../hw6_figures/baseClasses/baseFigure');
+const { Circle } = require('../hw6_figures/figures/circle');
+const { ThreeEqSidesTr } = require('./figures/treeEqSidesTr');
+const { TwoEqSidesTr } = require('./figures/twoEqSidesTr');
+const { RightTr } = require('./figures/rightTr');
+const { Rectangle } = require('./figures/rectangle');
+const { Square } = require('./figures/square');
+const { Rhombus } = require('./figures/rhombus');
 
 const pointC = [1, 1, 'A']
-let circle1 = new Circle(pointC, 10);
-console.log(circle1.getType());
-console.log(circle1.getSquare());
-console.log(circle1.getPerimeter());
+let circle2 = new Circle(pointC, 10);
+console.log(circle2.getType());
+console.log(circle2.getSquare());
+console.log(circle2.getPerimeter());
 
 const pointTr = [1, 1, 'A', 2, 2, 'B', 1, 3, 'C']
 let equilTr = new ThreeEqSidesTr(pointTr);

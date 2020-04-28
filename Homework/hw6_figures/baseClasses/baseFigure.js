@@ -1,4 +1,4 @@
-const { Point } = require('../baseClasses/point');
+const { Utils } = require('../utils/utils');
 
 class Figure {
     points;
@@ -10,15 +10,7 @@ class Figure {
                 console.log(e.stack);
             }
         }
-        this.createPoints(arr);
-    }
-    
-    createPoints(array){
-        const tempArr = array;
-        const arrOfArrays = [];
-        const arrLength = 3;
-        while(tempArr.length) arrOfArrays.push(tempArr.splice(0, arrLength));
-        this.points = arrOfArrays.map( el => new Point(el[0], el[1], el[2]));
+        this.points = Utils.createPoints(arr);
     }
 
     getType() {

@@ -3,7 +3,6 @@ const {Quadrangle} = require('../baseClasses/quadrangle');
 class Rhombus extends Quadrangle {
     constructor(arr){
         super(arr);
-        this.culcAllSides();
         this.setSides();
         this.setDiagonals();
     }

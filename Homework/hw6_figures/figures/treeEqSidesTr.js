@@ -4,7 +4,6 @@ class ThreeEqSidesTr extends Triangle {
     side = 0;
     constructor(arr){
         super(arr);
-        this.culcAllSides();
         this.side = this.sides[0];
     }
     

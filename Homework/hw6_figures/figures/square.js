@@ -3,7 +3,6 @@ const {Quadrangle} = require('../baseClasses/quadrangle');
 class Square extends Quadrangle {
     constructor(arr){
         super(arr);
-        this.culcAllSides();
         this.setSides();
     }
     sideA;

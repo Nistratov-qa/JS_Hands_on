@@ -1,7 +1,8 @@
 const { Figure } = require('../baseClasses/baseFigure');
-const { Point } = require('../baseClasses/point');
+const { Utils } = require('../utils/utils');
 
 class Triangle extends Figure {
+    sides;
     constructor(arr) {
         super(arr);
         if (new.target === Triangle) {
@@ -11,22 +12,10 @@ class Triangle extends Figure {
                 console.log(e.stack);
             }
         }
+        this.sides = Utils.culcAllSides(this.points);
     }
-    sides =[];
 
-    culcAllSides(){
-        if(this.points.length < 3) {
-            console.log('There are less than 3 points!')
-        } else {
-        let ab = Math.sqrt(((this.points[0].x - this.points[1].x) ** 2) + ((this.points[0].y - this.points[1].y) ** 2));
-        let bc = Math.sqrt(((this.points[1].x - this.points[2].x) ** 2) + ((this.points[1].y - this.points[2].y) ** 2));
-        let ca = Math.sqrt(((this.points[2].x - this.points[0].x) ** 2) + ((this.points[2].y - this.points[0].y) ** 2));
-        this.sides.push(Math.round(Math.abs(ab)));
-        this.sides.push(Math.round(Math.abs(bc)));
-        this.sides.push(Math.round(Math.abs(ca)));
-        }
-    }
-    setSides(){
+    setSides() {
         throw new Error("Method 'setSides()' must be implemented.");
     }
 }

@@ -1,5 +1,5 @@
 const {Figure} = require('../baseClasses/baseFigure');
-const {Point} = require('../baseClasses/point');
+const { Utils } = require('../utils/utils');
 
 class Circle extends Figure {
     radius = 0;
