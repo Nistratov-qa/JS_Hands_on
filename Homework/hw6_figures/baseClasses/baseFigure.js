@@ -11,6 +11,7 @@ class Figure {
             }
         }
         this.points = Utils.createPoints(arr);
+        // console.log(this.points);
     }
 
     getType() {
