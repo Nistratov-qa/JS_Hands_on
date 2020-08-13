@@ -13,11 +13,29 @@
 // except for the first word in the string. 
 // The JavaScript/CoffeeScript tests will pass undefined when this argument is unused.
 
-function titleCase(title, minorWords=null) {
-  
+function firstUpper(word) {
+    let a = word.charAt(0).toUpperCase() + word.slice(1);
+    return a
 }
 
-titleCase('');                                       // should return: ''
-titleCase('a clash of KINGS', 'a an the of');        // should return: 'A Clash of Kings'
-titleCase('THE WIND IN THE WILLOWS', 'The In');      // should return: 'The Wind in the Willows'
-titleCase('the quick brown fox');                    // should return: 'The Quick Brown Fox'
+function titleCase(title, minorWords = null) {
+    let textToLower = title.toLowerCase();
+    let allWords = textToLower.split(" ").map(el => firstUpper(el));
+
+    if (minorWords) {
+        let minor = minorWords.toLowerCase().split(" ").map(el => firstUpper(el));
+        allWords = allWords.map(word => {
+            if(minor.includes(word)) {
+                return word.toLowerCase();
+            } else return word
+        })
+        allWords[0] = firstUpper(allWords[0]);
+    } return allWords.join(" ");
+}
+
+console.log(titleCase('THE WIND IN THE WILLOWS', 'in the'));
+
+// titleCase('');                                       // should return: ''
+// titleCase('a clash of KINGS', 'a an the of');        // should return: 'A Clash of Kings'
+// titleCase('THE WIND IN THE WILLOWS', 'The In');      // should return: 'The Wind in the Willows'
+// titleCase('the quick brown fox');                    // should return: 'The Quick Brown Fox'
